@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>AZMY EHAB - Linkbio | Instabio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Segoe UI', sans-serif; 
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(180deg, #2C3E50 0%, #BDC3C7 100%);
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 15px 100px 15px; 
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+
+        /* ==========================================================================
+           🎯 1. أنيميشن دخول الشلال المتتابع (Stagger Entrance) عند الفتح
+           ========================================================================== */
+        @keyframes waterfallEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(24px) scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .profile-section,
+        .social-icons-mini a,
+        .links-container .link-item {
+            opacity: 0;
+            animation: waterfallEntrance 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        .profile-section { animation-delay: 0.1s; }
+        .social-icons-mini a:nth-child(1) { animation-delay: 0.25s; }
+        .social-icons-mini a:nth-child(2) { animation-delay: 0.35s; }
+        .social-icons-mini a:nth-child(3) { animation-delay: 0.45s; }
+
+        .links-container .link-item:nth-child(1)  { animation-delay: 0.50s; }
+        .links-container .link-item:nth-child(2)  { animation-delay: 0.58s; }
+        .links-container .link-item:nth-child(3)  { animation-delay: 0.66s; }
+        .links-container .link-item:nth-child(4)  { animation-delay: 0.74s; }
+        .links-container .link-item:nth-child(5)  { animation-delay: 0.82s; }
+        .links-container .link-item:nth-child(6)  { animation-delay: 0.90s; }
+        .links-container .link-item:nth-child(7)  { animation-delay: 0.98s; }
+        .links-container .link-item:nth-child(8)  { animation-delay: 1.06s; }
+        .links-container .link-item:nth-child(9)  { animation-delay: 1.14s; }
+        .links-container .link-item:nth-child(10) { animation-delay: 1.22s; }
+        .links-container .link-item:nth-child(11) { animation-delay: 1.30s; }
+        .links-container .link-item:nth-child(12) { animation-delay: 1.38s; }
+        .links-container .link-item:nth-child(13) { animation-delay: 1.46s; }
+
+        /* ==========================================================================
+           🎯 2. التصميم الأساسي للأزرار والبروفايل
+           ========================================================================== */
+        .profile-section { margin-bottom: 25px; }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin-bottom: 15px;
+        }
+
+        .name {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .bio {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .social-icons-mini {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            margin-bottom: 30px;
+        }
+
+        .social-icons-mini a {
+            color: #ffffff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+        }
+
+        .social-icons-mini a:hover {
+            transform: scale(1.25) translateY(-2px);
+        }
+        .social-icons-mini a.fb-mini:hover { color: #1877F2; }
+        .social-icons-mini a.ig-mini:hover { color: #E1306C; }
+        .social-icons-mini a.x-mini:hover { color: #000000; }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .link-item {
+            background: #ffffff;
+            border-radius: 8px; 
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333333;
+            font-size: 15px;
+            font-weight: 600; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                        box-shadow 0.4s ease, 
+                        color 0.25s ease, 
+                        background-color 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-item:hover {
+            transform: translateY(-5px) scale(1.015);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            background-color: #ffffff;
+        }
+
+        .link-item:active {
+            transform: translateY(-1px) scale(0.99);
+        }
+
+        .link-item i {
+            font-size: 20px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333333;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.25s ease;
+        }
+
+        .link-item:hover i {
+            transform: scale(1.2) rotate(4deg);
+        }
+
+        .link-item span {
+            flex-grow: 1;
+            text-align: center;
+            padding-right: 30px; 
+            font-weight: 600;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .link-item:hover span {
+            transform: scale(1.03);
+        }
+
+        .custom-cash-icon {
+            border: 2px solid #333333;
+            border-radius: 4px;
+            font-size: 13px !important;
+            font-weight: 700;
+            width: 22px !important;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+        }
+        .link-item:hover .custom-cash-icon {
+            transform: scale(1.15);
+        }
+
+        /* ==========================================================================
+           🎯 3. تأثير ألوان الهوية (Brand Identity) عند الـ Hover
+           ========================================================================== */
+        .link-item.instagram:hover { color: #E1306C; }
+        .link-item.instagram:hover i { color: #E1306C; }
+
+        .link-item.facebook:hover { color: #1877F2; }
+        .link-item.facebook:hover i { color: #1877F2; }
+
+        .link-item.whatsapp:hover { color: #25D366; }
+        .link-item.whatsapp:hover i { color: #25D366; }
+
+        .link-item.x-brand:hover { color: #000000; }
+        .link-item.x-brand:hover i { color: #000000; }
+
+        .link-item.youtube:hover { color: #FF0000; }
+        .link-item.youtube:hover i { color: #FF0000; }
+
+        .link-item.snapchat:hover { color: #FFFC00; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+        .link-item.snapchat:hover i { color: #000000; }
+
+        .link-item.tiktok:hover { color: #000000; }
+        .link-item.tiktok:hover i { color: #EE1D52; }
+
+        .link-item.telegram:hover { color: #0088cc; }
+        .link-item.telegram:hover i { color: #0088cc; }
+
+        .link-item.spotify:hover { color: #1DB954; }
+        .link-item.spotify:hover i { color: #1DB954; }
+
+        .link-item.github:hover { color: #24292e; }
+        .link-item.github:hover i { color: #24292e; }
+
+        .link-item.linkedin:hover { color: #0077B5; }
+        .link-item.linkedin:hover i { color: #0077B5; }
+
+        .link-item.instapay:hover { color: #7B1FA2; }
+        .link-item.instapay:hover .custom-cash-icon { color: #7B1FA2; border-color: #7B1FA2; }
+
+        .link-item.vfcash:hover { color: #E60000; }
+        .link-item.vfcash:hover .custom-cash-icon { color: #E60000; border-color: #E60000; }
+
+        /* ==========================================================================
+           🎯 4. تأثير التوهج المتحرك (Shimmer) لأزرار الدفع
+           ========================================================================== */
+        @keyframes shimmerEffect {
+            0% { transform: translateX(-150%) skewX(-25deg); }
+            100% { transform: translateX(150%) skewX(-25deg); }
+        }
+
+        .pay-accent::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 30%; height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+            animation: shimmerEffect 2.5s infinite linear;
+        }
+
+        /* ==========================================================================
+           🎯 5. الفوتر الزجاجي الاحترافي المثبت بالأسفل
+           ========================================================================== */
+        .custom-footer-container {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 999;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+        }
+
+        .custom-footer {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="profile-section">
+        <img src="image.jpg" class="profile-image" alt="Azmy Ehab">
+        <h1 class="name">AZMY EHAB</h1>
+        <p class="bio">I don't want much, just you❤️</p>
+    </div>
+
+    <div class="social-icons-mini">
+        <a href="https://www.facebook.com/profile.php?id=100083276749464&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="fb-mini"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/azmy_ehab_?igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="ig-mini"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/AZMYEHAB21" target="_blank" rel="noopener noreferrer" class="x-mini"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+
+    <div class="links-container">
+
+        <a href="https://instagram.com/azmy_ehab_?igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="link-item instagram">
+            <i class="fab fa-instagram"></i>
+            <span>instgram</span>
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=100083276749464&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="link-item facebook">
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+        </a>
+
+        <a href="https://wa.me/201220373091" target="_blank" rel="noopener noreferrer" class="link-item whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
+        <a href="https://x.com/AZMYEHAB21" target="_blank" rel="noopener noreferrer" class="link-item x-brand">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>X</span>
+        </a>
+
+        <a href="https://youtube.com/@AZMY_EHAB" target="_blank" rel="noopener noreferrer" class="link-item youtube">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+        </a>
+
+        <a href="https://www.snapchat.com/add/azmyehab21?share_id=hGH8vetBwmE&locale=en-US" target="_blank" rel="noopener noreferrer" class="link-item snapchat">
+            <i class="fab fa-snapchat"></i>
+            <span>Snapchat</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@azmy_ehab_?_t=8sCrlXaWVoF&_r=1" target="_blank" rel="noopener noreferrer" class="link-item tiktok">
+            <i class="fab fa-tiktok"></i>
+            <span>Tiktok</span>
+        </a>
+
+        <a href="https://t.me/azmyehab" target="_blank" rel="noopener noreferrer" class="link-item telegram">
+            <i class="fab fa-telegram-plane"></i>
+            <span>Telegram</span>
+        </a>
+
+        <a href="https://ipn.eg/S/azmyehab21.eg/instapay/7mxUyW" target="_blank" rel="noopener noreferrer" class="link-item instapay pay-accent">
+            <i class="custom-cash-icon">$</i>
+            <span>Instapay</span>
+        </a>
+
+        <a href="https://vf.eg/vfcash?id=mt&qrId=YD49Sn" target="_blank" rel="noopener noreferrer" class="link-item vfcash pay-accent">
+            <i class="custom-cash-icon">$</i>
+            <span>Vodafone Cash</span>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer" class="link-item spotify">
+            <i class="fab fa-spotify"></i>
+            <span>Spotify</span>
+        </a>
+
+        <a href="https://github.com/AZMYEHAB21" target="_blank" rel="noopener noreferrer" class="link-item github">
+            <i class="fab fa-github"></i>
+            <span>Git Hub</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/azmy-ihab-0219b4356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="link-item linkedin">
+            <i class="fab fa-linkedin-in"></i>
+            <span>Linkedin</span>
+        </a>
+
+    </div>
+
+</div>
+
+<div class="custom-footer-container">
+    <footer class="custom-footer">
+        AZMY EHAB 2026 ©
+    </footer>
+</div>
+
+</body>
+</html>
