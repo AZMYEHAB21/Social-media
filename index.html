@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>AZMY EHAB 🗸</title>
+    <title>AZMY EHAB</title>
     
     <meta property="og:title" content="AZMY EHAB">
     <meta property="og:description" content="I don't want much, just you❤️">
     <meta property="og:image" content="https://azmyehab21.github.io/Social-media/image.jpg">
-    
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="300">
@@ -19,10 +18,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <style>
+        /* ==========================================================================
+           1. Global Styles & Reset
+           ========================================================================== */
         * {
             margin: 0;
             padding: 0;
@@ -48,7 +49,7 @@
         }
 
         /* ==========================================================================
-           🎯 1. أنيميشن دخول الشلال المتتابع (Stagger Entrance) عند الفتح
+           2. Animations (Stagger Entrance)
            ========================================================================== */
         @keyframes waterfallEntrance {
             from {
@@ -68,6 +69,7 @@
             animation: waterfallEntrance 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
         }
 
+        /* Delays for Smooth Waterfall Transition */
         .profile-section { animation-delay: 0.1s; }
         .social-icons-mini a:nth-child(1) { animation-delay: 0.25s; }
         .social-icons-mini a:nth-child(2) { animation-delay: 0.35s; }
@@ -88,9 +90,11 @@
         .links-container .link-item:nth-child(13) { animation-delay: 1.46s; }
 
         /* ==========================================================================
-           🎯 2. التصميم الأساسي للأزرار والبروفايل
+           3. Profile Section & Verified Badge
            ========================================================================== */
-        .profile-section { margin-bottom: 25px; }
+        .profile-section { 
+            margin-bottom: 25px; 
+        }
 
         .profile-image {
             width: 100px;
@@ -102,7 +106,6 @@
             margin-bottom: 15px;
         }
 
-        /* تعديل الهيدنج عشان علامة التوثيق تيجي جمبه بالظبط */
         .name {
             color: #ffffff;
             font-size: 22px;
@@ -112,13 +115,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px; /* مسافة بين الاسم والعلامة */
+            gap: 6px; 
         }
 
-        /* ستايل علامة التوثيق الزرقاء */
+        /* الستايل النظيف لعلامة التوثيق الزرقاء */
         .verified-badge {
-            color: #1d9bf0; /* اللون الأزرق الرسمي للتوثيق */
-            font-size: 18px; /* حجم متناسق مع حجم الخط */
+            color: #1d9bf0; 
+            font-size: 18px; 
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -133,6 +136,9 @@
             opacity: 0.9;
         }
 
+        /* ==========================================================================
+           4. Mini Social Icons
+           ========================================================================== */
         .social-icons-mini {
             display: flex;
             justify-content: center;
@@ -154,6 +160,9 @@
         .social-icons-mini a.ig-mini:hover { color: #E1306C; }
         .social-icons-mini a.x-mini:hover { color: #000000; }
 
+        /* ==========================================================================
+           5. Main Links Containers & Items
+           ========================================================================== */
         .links-container {
             display: flex;
             flex-direction: column;
@@ -228,12 +237,13 @@
             justify-content: center;
             transition: all 0.25s ease;
         }
+        
         .link-item:hover .custom-cash-icon {
             transform: scale(1.15);
         }
 
         /* ==========================================================================
-           🎯 3. تأثير ألوان الهوية (Brand Identity) عند الـ Hover
+           6. Brand Identity Colors (Hover States)
            ========================================================================== */
         .link-item.instagram:hover { color: #E1306C; }
         .link-item.instagram:hover i { color: #E1306C; }
@@ -275,7 +285,7 @@
         .link-item.vfcash:hover .custom-cash-icon { color: #E60000; border-color: #E60000; }
 
         /* ==========================================================================
-           🎯 4. تأثير التوهج المتحرك (Shimmer) لأزرار الدفع
+           7. Shimmer Effect (Payment Buttons Accent)
            ========================================================================== */
         @keyframes shimmerEffect {
             0% { transform: translateX(-150%) skewX(-25deg); }
@@ -291,7 +301,7 @@
         }
 
         /* ==========================================================================
-           🎯 5. الفوتر الزجاجي الاحترافي المثبت بالأسفل
+           8. Glassmorphism Sticky Footer
            ========================================================================== */
         .custom-footer-container {
             position: fixed;
