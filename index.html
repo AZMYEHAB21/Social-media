@@ -421,9 +421,13 @@
 
 <div class="custom-footer-container">
     <footer class="custom-footer">
-        AZMY EHAB 2026 ©
+        AZMY EHAB <span id="current-year">2026</span> ©
     </footer>
 </div>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 </body> 
 </html>
