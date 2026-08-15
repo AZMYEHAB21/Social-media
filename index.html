@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -8,7 +8,14 @@
     <meta name="description" content="الموقع الرسمي لـ عزمي إيهاب (AZMY EHAB). تواصل معي عبر منصات التواصل الاجتماعي المختلفة: فيسبوك، إنستجرام، لينكد إن، وغيرها.">
     <meta name="keywords" content="AZMY EHAB, عزمي إيهاب, azmyehab21, Azmy Ehab Links, روابط عزمي إيهاب">
     <meta name="author" content="AZMY EHAB">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#2C3E50">
+    <meta name="color-scheme" content="dark">
     <link rel="canonical" href="https://azmyehab21.github.io/Social-media/">
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="shortcut icon" href="favicon-48x48.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon-48x48.png">
 
     <meta property="og:type" content="profile">
     <meta property="og:title" content="AZMY EHAB | عزمي إيهاب">
@@ -24,9 +31,6 @@
     <meta name="twitter:description" content="I don't want much, just you❤️">
     <meta name="twitter:image" content="https://azmyehab21.github.io/Social-media/image.jpg">
 
-    <link rel="icon" type="image/png" sizes="48x48" href="https://azmyehab21.github.io/Social-media/favicon-48x48.png">
-    <link rel="shortcut icon" type="image/png" href="https://azmyehab21.github.io/Social-media/favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="48x48" href="https://azmyehab21.github.io/Social-media/favicon-48x48.png"> 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -179,6 +183,26 @@
         .social-icons-mini a.fb-mini:hover { color: #1877F2; }
         .social-icons-mini a.ig-mini:hover { color: #E1306C; }
         .social-icons-mini a.x-mini:hover { color: #000000; }
+
+        .share-button {
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            border-radius: 999px;
+            padding: 10px 18px;
+            margin-bottom: 18px;
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--text-light);
+            cursor: pointer;
+            font: inherit;
+            font-size: 14px;
+            transition: transform 0.25s ease, background-color 0.25s ease;
+        }
+
+        .share-button:hover,
+        .share-button:focus-visible {
+            background: rgba(255, 255, 255, 0.22);
+            transform: translateY(-2px);
+            outline: none;
+        }
 
         /* Links Container & Items */
         .links-container {
@@ -351,6 +375,11 @@
         <a href="https://x.com/AZMYEHAB21" target="_blank" rel="noopener noreferrer" class="x-mini animate-item" style="animation-delay: 0.4s;"><i class="fa-brands fa-x-twitter"></i></a>
     </div>
 
+    <button class="share-button" type="button" id="share-button" aria-label="مشاركة الموقع">
+        <i class="fas fa-share-nodes" aria-hidden="true"></i>
+        مشاركة الموقع
+    </button>
+
     <div class="links-container">
         <a href="https://instagram.com/azmy_ehab_?igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="link-item instagram animate-item" style="animation-delay: 0.5s;">
             <i class="fab fa-instagram"></i>
@@ -427,6 +456,21 @@
 
 <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    document.getElementById('share-button').addEventListener('click', async () => {
+        const shareData = {
+            title: document.title,
+            text: 'الموقع الرسمي لـ AZMY EHAB',
+            url: window.location.href
+        };
+
+        if (navigator.share) {
+            await navigator.share(shareData);
+        } else {
+            await navigator.clipboard.writeText(window.location.href);
+            document.getElementById('share-button').lastChild.textContent = ' تم نسخ الرابط';
+        }
+    });
 </script>
 
 </body> 
