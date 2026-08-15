@@ -1,192 +1,93 @@
-# 🌟 AZMY EHAB - Social Media Hub
+# AZMY EHAB — Social Media Hub
 
-<div align="center">
+A clean, responsive personal landing page that brings AZMY EHAB's social links, contact channels, and digital payment options together in one fast, accessible experience.
 
-# AZMY EHAB
+[![Live Website](https://img.shields.io/badge/Live%20Website-Visit%20now-2f855a?style=for-the-badge)](https://azmyehab21.github.io/Social-media/)
+[![HTML5](https://img.shields.io/badge/HTML5-Static%20site-e34f26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Responsive](https://img.shields.io/badge/Responsive-Mobile%20first-2563eb?style=flat-square)](https://azmyehab21.github.io/Social-media/)
 
-### Personal Social Media & Digital Presence Landing Page
+## About
 
-<<<<<<< HEAD
-A highly optimized, premium, responsive, and animated personal landing page that centralizes all social media profiles, payment methods, and contact channels into one elegant experience.
+This project is a lightweight link-in-bio website for sharing personal profiles, communication channels, developer accounts, and payment methods from one memorable URL.
 
-[![Live Website](https://img.shields.io/badge/Live-Website-success?style=for-the-badge&logo=google-chrome&logoColor=white)](https://azmyehab21.github.io/Social-media/)
-[![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)](https://azmyehab21.github.io/Social-media/)
-[![Responsive](https://img.shields.io/badge/Responsive-Yes-blue?style=flat-square)](https://azmyehab21.github.io/Social-media/)
-[![SEO](https://img.shields.io/badge/SEO-Optimized-brightgreen?style=flat-square)](https://azmyehab21.github.io/Social-media/)
-=======
-A modern, responsive, and animated personal landing page that centralizes all social media profiles, payment methods, and contact channels in one elegant experience.
+The interface is built with a mobile-first approach, semantic HTML, accessible controls, subtle animations, and a focused visual system that stays fast on mobile devices.
 
-![Status](https://img.shields.io/badge/Status-Active-success)
-![Responsive](https://img.shields.io/badge/Responsive-Yes-blue)
-![HTML5](https://img.shields.io/badge/HTML5-100%25-orange)
-![License](https://img.shields.io/badge/License-Personal-red)
->>>>>>> 8eec98c (update website)
+## Highlights
 
-</div>
+- Responsive layout for mobile, tablet, and desktop
+- Semantic HTML structure with Arabic RTL support
+- SEO metadata, Open Graph tags, canonical URL, and structured data
+- Personal favicon and social preview image
+- Smooth entrance animations and accessible hover/focus states
+- Share button using the Web Share API with clipboard fallback
+- Automatic copyright year using JavaScript
+- No framework or build step required
 
----
+## Included Channels
 
-<<<<<<< HEAD
-## 🌐 Live Preview
+- Instagram
+- Facebook
+- WhatsApp
+- X
+- YouTube
+- Snapchat
+- TikTok
+- Telegram
+- LinkedIn
+- GitHub
+- Spotify
+- InstaPay
+- Vodafone Cash
 
-You can visit the live website and access all my digital channels directly here:
-👉 **[https://azmyehab21.github.io/Social-media/](https://azmyehab21.github.io/Social-media/)**
+## Project Structure
 
----
-
-## 🚀 Overview
-
-This project is a premium **Link-in-Bio** platform engineered to give visitors seamless, instantaneous access to all personal profiles, developer portfolios, and digital payment networks through a unified, clean, and highly secure interface.
-
-### Key Focus Areas:
-* **Elite UI/UX:** Built with a stunning dark-to-light slate gradient and clean geometry.
-* **Mobile-First Philosophy:** Fluid responsiveness meticulously optimized for iOS, Android, and desktop viewports.
-* **Micro-Interactions:** Staggered entrance cascades and smooth CSS brand-color shifts upon hovering.
-* **Production-Grade SEO:** Pre-configured with JSON-LD Structured Data, Open Graph tags, and absolute path indexing for immediate Google ranking.
-=======
-## 🚀 Overview
-
-This project is a modern Link-in-Bio website designed to provide visitors with quick access to all personal platforms, social media accounts, and digital payment methods through a clean and professional interface.
-
-The website focuses on:
-
-* Elegant UI/UX
-* Fully responsive design
-* Smooth animations
-* Fast loading speed
-* Mobile-first experience
-* Modern visual identity
->>>>>>> 8eec98c (update website)
-
----
-
-## ✨ Features
-
-<<<<<<< HEAD
-### 🎨 Visual & Performance Identity
-* **Cascading Entrance:** Elements leverage a bespoke cubic-bezier waterfall animation.
-* **Glassmorphism Elements:** Dynamic blur footers utilizing progressive enhancement (`backdrop-filter`).
-* **InstaPay/VF Cash Shimmer:** Financial links utilize an automatic high-end silver shimmer animation to guide user intent.
-* **Dynamic Copyright:** Integrated JavaScript logic that automatically increments the legal year.
-
-### 🔗 Supported Platforms & Protocols
-
-| Category | Platforms |
-| :--- | :--- |
-| **Social & Content** | Instagram, Facebook, X (Twitter), YouTube, Snapchat, TikTok |
-| **Communication** | WhatsApp, Telegram, LinkedIn |
-| **Development** | GitHub, Spotify |
-| **Financial Gateways** | InstaPay, Vodafone Cash |
-
----
-
-## 🛠️ Tech Stack & Architecture
-
-* **Markup:** HTML5 (Semantic and fully validated).
-* **Styling:** CSS3 (Custom properties / design tokens, Flexbox layout, Keyframe orchestration).
-* **Typography & Icons:** Google Fonts (Montserrat), Font Awesome v6.5.2 Pro CDN.
-* **SEO & Crawling:** Schema.org Integration, Semantic Meta Tags, `robots.txt`, XML Sitemaps.
-=======
-### 🎨 User Interface
-
-* Modern minimalist design
-* Professional gradient background
-* Glassmorphism footer
-* Smooth hover effects
-* Staggered entrance animations
-
-### 📱 Responsive
-
-* Mobile Friendly
-* Tablet Compatible
-* Desktop Optimized
-
-### 🔗 Social Platforms
-
-* Instagram
-* Facebook
-* WhatsApp
-* X (Twitter)
-* YouTube
-* Snapchat
-* TikTok
-* Telegram
-* GitHub
-* LinkedIn
-
-### 💳 Payment Methods
-
-* InstaPay
-* Vodafone Cash
-
----
-
-## 🛠️ Technologies Used
-
-* HTML5
-* CSS3
-* Font Awesome
-* Google Fonts
-* Responsive Design
-* CSS Animations
->>>>>>> 8eec98c (update website)
-
----
-
-## 📂 Project Structure
-
-```bash
+```text
 .
-<<<<<<< HEAD
-├── index.html                   # Core semantic layout & custom stylesheet
-├── image.jpg                    # High-definition Open Graph / Meta sharing cover image
-├── avatar.jpg                   # High-fidelity multi-resolution Favicon asset
-├── robots.txt                   # Explicit crawling controller directives for search engines
-├── sitemap.xml                  # Automated XML layout index for Google indexing routing
-└── README.md                    # Professional technical documentation
-=======
-├── index.html
-├── image.jpg
-└── README.md
+├── index.html          # Complete page: HTML, CSS, and JavaScript
+├── image.jpg           # Main profile/share image
+├── favicon.png         # Main favicon asset
+├── favicon-16x16.png   # Small browser favicon
+├── favicon-48x48.png   # Search and browser favicon
+├── robots.txt          # Search crawler instructions
+├── sitemap.xml         # Sitemap for search engines
+└── README.md           # Project documentation
 ```
 
----
+## Run Locally
 
-## 📧 Contact
+Because the website is static, you can open `index.html` directly in a browser. For a local server, use any static hosting tool or preview it through GitHub Pages.
+
+## Deployment
+
+The site is ready for deployment with:
+
+- GitHub Pages
+- Netlify
+- Vercel static hosting
+
+The production URL is:
+
+<https://azmyehab21.github.io/Social-media/>
+
+## SEO Checklist
+
+- Keep the canonical URL aligned with the deployed URL.
+- Submit the sitemap in Google Search Console:
+  <https://azmyehab21.github.io/Social-media/sitemap.xml>
+- Request indexing after meaningful updates.
+- Keep the favicon files in the same directory as `index.html`.
+- Replace any placeholder social links with the real account URLs.
+
+## Contact
 
 **AZMY EHAB**
 
-Email: [azmyehab610@gmail.com](mailto:azmyehab610@gmail.com)
+- Email: <azmyehab610@gmail.com>
+- GitHub: <https://github.com/AZMYEHAB21>
+- LinkedIn: <https://www.linkedin.com/in/azmy-ihab-0219b4356>
 
-GitHub:
-https://github.com/AZMYEHAB21
+## License
 
-LinkedIn:
-https://www.linkedin.com/in/azmy-ihab-0219b4356
+Personal project. All rights reserved.
 
----
-
-## 🌐 Live Preview
-
-Deploy easily using:
-
-* GitHub Pages
-* Netlify
-* Vercel
-
----
-
-## ⭐ Support
-
-If you like this project, consider giving it a star on GitHub.
-
----
-
-<div align="center">
-
-Made with ❤️ by AZMY EHAB
-
-© 2026 All Rights Reserved
-
-</div>
->>>>>>> 8eec98c (update website)
+Copyright AZMY EHAB — 2026
